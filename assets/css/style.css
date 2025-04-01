@@ -15,16 +15,24 @@
     --color-dark-primary: #333fc3;
 }
 
-html{
+html, body {
+    height: 100%;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Work Sans', sans-serif;
     background-color: var(--black);
-   /*  padding-bottom: 60px; */ /* Ensure space for the fixed footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 
 /* header */
 header{
@@ -106,7 +114,6 @@ header{
     gap: 1em;
 }
 
-
 .wrapper p{
     font-weight: 600;
     font-size: 15px;
@@ -121,7 +128,6 @@ header{
     border-radius: 5px;
     outline: 1px solid var(--black);
     transition: all 0.1s ease;
-
 }
 
 .wrapper input:focus{
@@ -147,11 +153,13 @@ header{
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s ease;
-}.wrapper button:hover{
+}
+
+.wrapper button:hover{
     background: var(--color-dark-primary);
 }
 
-#imgBoX{  /* The qr code  */
+#imgBox {  /* The qr code  */
     width: 200px;
     border-radius: 5px;
     max-height: 0;
@@ -191,3 +199,35 @@ header{
         transform: translate(0);
     }
 }
+footer {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    position: fixed; /* Change 'absolute' to 'fixed' */
+    bottom: 0; /* This positions it at the bottom of the viewport */
+    left: 50%;
+    transform: translateX(-50%); /* To center it horizontally */
+    width: 100%; /* Ensure the footer spans the full width */
+}
+
+footer p{
+    font-size: 0.9em;
+    color: #f3f3f3;
+}
+
+footer a{
+    font-size: 0.9em;
+    color: #f3f3f3;
+    text-decoration: none;
+    transform: 0.3s ease;
+}
+footer a:hover{
+    text-decoration: underline var(--color-primary);
+}
+
+/* footer {
+    padding: 1em;
+    background-color: var(--color-dark-primary);
+} */

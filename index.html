@@ -22,47 +22,51 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-    <!--This project is deddicated to the Lord, my family and friends that leep on supporting me-->
+    <!--This project is dedicated to the Lord, my family, and friends who keep supporting me-->
 </head>
 <body>
-<header>
-    <div class="social-container" onclick="toggleBar(event)">
-        <img src="./assets/img/Picsart_25-03-31_18-06-08-228.png" alt="Typical Developer">
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/christopher-nzenwata-b52807334/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Chris-Error-404" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/typicaldeveloper/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/Chris_Error_404" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://wa.me/2348141207888" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-        </div>
+    <div class="content-container">
+        <header>
+            <div class="social-container" onclick="toggleBar(event)">
+                <img src="./assets/img/Picsart_25-03-31_18-06-08-228.png" alt="Typical Developer">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/christopher-nzenwata-b52807334/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Chris-Error-404" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/typicaldeveloper/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/Chris_Error_404" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://wa.me/2348141207888" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="wrapper">
+                <h3>Enter your website URL</h3>
+                <input type="text" placeholder="Text or URL" id="qrText">
+
+                <div id="imgBox">
+                    <img src="" alt="" id="qrImage">
+                </div>
+
+                <button type="button" onclick="generateQR()">Generate QR Code</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ and ☕ by <a href="https://nzenwata-christopher-web-developer.vercel.app/" target="_blank" rel="noopener noreferrer"> Nzenwata Christopher </a></p>
+        </footer>
     </div>
-</header>
-
-<main>
-    <div class="wrapper">
-        <h3>Enter your website URL</h3>
-        <input type="text" placeholder="Text or URL" id="qrText">
-
-        <div id="imgBox">
-            <img src="" alt="" id="qrImage">
-        </div>
-
-        <button type="button" onclick="generateQR()">Generate QR Code</button>
-    </div>
-</main>
-
 
     <script src="./assets/js/main.js"></script>
-    
 </body>
 </html>
