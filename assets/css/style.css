@@ -23,9 +23,71 @@ body{
     font-family: 'Work Sans', sans-serif;
     background-color: var(--black);
    /*  padding-bottom: 60px; */ /* Ensure space for the fixed footer */
-   padding: 4em;
 }
 
+
+/* header */
+header{
+    padding: 1em;
+}
+
+.social-container{
+    background-color: white;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.social-container img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.social-links{
+    display: none;
+    gap: 1em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    justify-content: space-around;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.social-links a{
+    color: black;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+.social-links a:hover{
+    transform: scale(1.2);
+}
+
+.social-container.expanded{
+    width: 15em;
+    border-radius: 2.5em;
+}
+
+.expanded img{
+    opacity: 0;
+}
+
+.expanded .social-links{
+    display: flex;
+    opacity: 1;
+}
+/* end header */
 
 .wrapper{
     width: 80vmin;
@@ -100,7 +162,6 @@ body{
 }
 
 #imgBox img{
-    border: 1px solid var(--black);
     width: 90%;
     padding: 10px;
 }
