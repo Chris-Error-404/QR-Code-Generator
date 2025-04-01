@@ -1,0 +1,5 @@
+@media  (max-width: 480){ 
+    #imgBox img { /* to reduce QR code size for smaller screens */
+        width: 80%;
+    }
+}
