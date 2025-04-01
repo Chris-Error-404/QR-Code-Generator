@@ -44,3 +44,26 @@ let qrText = document.getElementById("qrText");
 
 
  }
+
+
+//light and dark theme
+const themeToggleButton = document.getElementById('theme-toggle');
+
+// Check if the theme is stored in localStorage and apply it
+if (localStorage.getItem('theme') === 'light') {
+    document.body.setAttribute('data-theme', 'light');
+    document.querySelector('#theme-toggle i').classList.replace('fa-moon', 'fa-sun'); // Change icon to sun
+}
+
+// Event listener to toggle the theme
+themeToggleButton.addEventListener('click', () => {
+    if (document.body.getAttribute('data-theme') === 'light') {
+        document.body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+        document.querySelector('#theme-toggle i').classList.replace('fa-sun', 'fa-moon'); // Change icon to moon
+    } else {
+        document.body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        document.querySelector('#theme-toggle i').classList.replace('fa-moon', 'fa-sun'); // Change icon to sun
+    }
+});
