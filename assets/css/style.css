@@ -249,8 +249,8 @@ footer p {
 
 /* Light Mode Button */
 .theme-toggle-btn {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--color-primary);
+    color: var(--black);
     border-radius: 50%;
     width: 50px;
     height: 50px;
