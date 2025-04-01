@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
@@ -8,11 +8,12 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --black: #000;
     --white: #fff;
     --color-primary: #4452fe;
     --color-dark-primary: #333fc3;
+    --yellow: #FDB813; /* Yellow color for light mode button */
 }
 
 html, body {
@@ -35,18 +36,18 @@ body {
 }
 
 /* header */
-header{
+header {
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.social-container{
+.social-container {
     background-color: white;
     width: 5em;
     height: 5em;
-    outline:  2px solid  var(--black);
+    outline: 1px solid var(--black);
     border-radius: 50%;
     overflow: hidden;
     transition: all 0.4s;
@@ -57,14 +58,14 @@ header{
     position: relative;
 }
 
-.social-container img{
+.social-container img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     transition: opacity 0.3s;
 }
 
-.social-links{
+.social-links {
     display: none;
     gap: 1em;
     position: absolute;
@@ -76,32 +77,32 @@ header{
     opacity: 0;
 }
 
-.social-links a{
+.social-links a {
     color: black;
     font-size: 1.5em;
     transition: 0.3s;
 }
 
-.social-links a:hover{
+.social-links a:hover {
     transform: scale(1.2);
 }
 
-.social-container.expanded{
+.social-container.expanded {
     width: 15em;
     border-radius: 2.5em;
 }
 
-.expanded img{
+.expanded img {
     opacity: 0;
 }
 
-.expanded .social-links{
+.expanded .social-links {
     display: flex;
     opacity: 1;
 }
 /* end header */
 
-.wrapper{
+.wrapper {
     width: 85vmin;
     padding: 3.135em 2.5em;
     background-color: var(--white);
@@ -118,13 +119,13 @@ header{
     gap: 1em;
 }
 
-.wrapper p{
+.wrapper p {
     font-weight: 600;
     font-size: 15px;
     margin-bottom: 8px;
 }
 
-.wrapper input{
+.wrapper input {
     width: 100%;
     height: 45px;
     padding: 1em;
@@ -134,17 +135,17 @@ header{
     transition: all 0.1s ease;
 }
 
-.wrapper input:focus{
+.wrapper input:focus {
     outline: none;
     border: 2px solid var(--color-primary);
 }
 
-.wrapper input::placeholder{
+.wrapper input::placeholder {
     font-family: 'Work Sans', sans-serif;
     margin-left: 0.5em;
 }
 
-.wrapper button{
+.wrapper button {
     font-family: 'Work Sans', sans-serif;
     background: var(--color-primary);
     color: var(--white);
@@ -159,11 +160,11 @@ header{
     transition: all 0.5s ease;
 }
 
-.wrapper button:hover{
+.wrapper button:hover {
     background: var(--color-dark-primary);
 }
 
-#imgBox {  /* The qr code  */
+#imgBox {
     width: 200px;
     border-radius: 5px;
     max-height: 0;
@@ -171,73 +172,73 @@ header{
     transition: all 0.3s ease-in;
 }
 
-#imgBox img{
+#imgBox img {
     width: 90%;
     padding: 10px;
 }
 
-#imgBox.show-img{
+#imgBox.show-img {
     max-height: 300px;
     margin: 1em;
     margin-left: 2em;
 }
 
-.error{
+.error {
     animation: shake 0.1s linear 10;
 }
 
-@keyframes shake{
-    0%{
+@keyframes shake {
+    0% {
         transform: translate(0);
     }
-    25%{
+
+    25% {
         transform: translate(-2px);
     }
-    50%{
+
+    50% {
         transform: translate(0);
     }
-    75%{
+
+    75% {
         transform: translate(2px);
     }
-    100%{
+
+    100% {
         transform: translate(0);
     }
 }
+
 footer {
     color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em;
-    position: fixed; /* Change 'absolute' to 'fixed' */
-    bottom: 0; /* This positions it at the bottom of the viewport */
+    position: fixed;
+    bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* To center it horizontally */
-    width: 100%; /* Ensure the footer spans the full width */
+    transform: translateX(-50%);
+    width: 100%;
 }
 
-footer p{
+footer p {
     font-size: 0.9em;
     color: #f3f3f3;
 }
 
-footer a{
+footer a {
     font-size: 0.9em;
     color: var(--white);
     text-decoration: none;
     transform: 0.3s ease;
 }
-footer a:hover{
+
+footer a:hover {
     text-decoration: underline var(--color-primary);
 }
 
-/* footer {
-    padding: 1em;
-    background-color: var(--color-dark-primary);
-} */
-
-
-/* Default Dark Mode */
+/* Dark Mode */
 body {
     background-color: var(--black);
 }
@@ -246,14 +247,10 @@ footer p {
     color: var(--white);
 }
 
-
-
-
-/* Light Mode */
-/* Button style */
+/* Light Mode Button */
 .theme-toggle-btn {
-    background-color: var(--black); /* Dark mode color */
-    color: var(--white); /* White icon for dark mode */
+    background-color: var(--black);
+    color: var(--white);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -273,25 +270,26 @@ footer p {
     font-size: 1.5em;
 }
 
-
+/* Light Mode */
 body[data-theme='light'] {
     background-color: var(--white);
 }
 
 body[data-theme='light'] footer p {
-    color: var(--black); /* Change footer text color to black in light mode */
+    color: var(--black);
 }
+
 body[data-theme='light'] footer a {
-    color: var(--black); /* Change footer text color to black in light mode */
+    color: var(--black);
 }
 
 /* Light Mode Button */
 body[data-theme='light'] .theme-toggle-btn {
-    background-color: var(--yellow); /* Yellow background for light mode */
-    color: var(--black); /* Black icon in light mode */
+    background-color: var(--yellow);
+    color: var(--black);
 }
 
 /* Icon change for light mode */
 body[data-theme='light'] .theme-toggle-btn i {
-    content: '\f185'; /* Sun icon (Font Awesome) */
+    content: '\f185'; /* Sun icon */
 }

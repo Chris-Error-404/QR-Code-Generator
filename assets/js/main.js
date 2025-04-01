@@ -49,12 +49,6 @@ let qrText = document.getElementById("qrText");
 //light and dark theme
 const themeToggleButton = document.getElementById('theme-toggle');
 
-// Check if the theme is stored in localStorage and apply it
-if (localStorage.getItem('theme') === 'light') {
-    document.body.setAttribute('data-theme', 'light');
-    document.querySelector('#theme-toggle i').classList.replace('fa-moon', 'fa-sun'); // Change icon to sun
-}
-
 // Event listener to toggle the theme
 themeToggleButton.addEventListener('click', () => {
     if (document.body.getAttribute('data-theme') === 'light') {
@@ -67,3 +61,16 @@ themeToggleButton.addEventListener('click', () => {
         document.querySelector('#theme-toggle i').classList.replace('fa-moon', 'fa-sun'); // Change icon to sun
     }
 });
+
+// Detect user's theme preference when the page loads
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+if (prefersDarkScheme.matches) {
+    // Set dark theme by default
+    document.body.setAttribute('data-theme', 'dark');
+    document.querySelector('#theme-toggle i').classList.replace('fa-moon', 'fa-sun'); // Set to sun icon
+} else {
+    // Set light theme by default
+    document.body.setAttribute('data-theme', 'light');
+    document.querySelector('#theme-toggle i').classList.replace('fa-moon', 'fa-sun'); // Set to sun icon
+}
