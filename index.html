@@ -21,15 +21,33 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <!--This project is deddicated to the Lord, my family and friends that leep on supporting me-->
 </head>
 <body>
     
-    <div class="container">
-        <h3>Enter your website URL</h3>
-        <input type="text" placeholder="Text or URL">
-        <button type="button">Generate QR Code</button>
-    </div>
+
+<!--         <h3>Enter your website URL</h3>
+        <input type="text" placeholder="Text or URL" id="qrText">
+
+        <div id="imgBox">
+            <img src="" alt="" id="qrImage">
+        </div>
+
+        <button type="button" onclick="generateQR()">Generate QR Code</button> -->
+        <main>
+            <div class="wrapper">
+                <h3>Enter your website URL</h3>
+                <input type="text" placeholder="Text or URL" id="qrText">
+                
+                <div id="imgBox">
+                    <img src="" alt="" id="qrImage">
+                </div>
+        
+                <button type="button" onclick="generateQR()">Generate QR Code</button>
+            </div>
+        </main>
+
 
     <script src="./assets/js/main.js"></script>
 </body>
